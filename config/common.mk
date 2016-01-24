@@ -46,6 +46,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
     ro.com.android.wifi-watchlist=GoogleGuest \
+    ro.error.receiver.system.apps=com.google.android.gms \
     ro.setupwizard.enterprise_mode=1 \
     ro.com.android.dateformat=MM-dd-yyyy \
     ro.com.android.dataroaming=false
@@ -126,7 +127,6 @@ PRODUCT_PACKAGES += \
     OmniSwitch \
     Eleven \
     LockClock \
-    CyanogenSetupWizard \
     CMSettingsProvider \
     ExactCalculator
 
@@ -201,7 +201,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/beanstalk/overlay/common
 
-BeanStalk_Version=6.05
+BeanStalk_Version=6.06
 BS_VERSION := BeanStalk-$(BeanStalk_Version)-$(shell date -u +%Y%m%d)-$(BS_BUILD)
 
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -222,7 +222,7 @@ ifndef CM_PLATFORM_SDK_VERSION
   # the SDK are released.  It should only be incremented when the APIs for
   # the new release are frozen (so that developers don't write apps against
   # intermediate builds).
-  CM_PLATFORM_SDK_VERSION := 4
+  CM_PLATFORM_SDK_VERSION := 5
 endif
 
 ifndef CM_PLATFORM_REV
