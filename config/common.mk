@@ -98,6 +98,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/beanstalk/config/permissions/com.cyanogenmod.android.xml:system/etc/permissions/com.cyanogenmod.android.xml
 
+# Live lockscreen
+PRODUCT_COPY_FILES += \
+    vendor/beanstalk/config/permissions/org.cyanogenmod.livelockscreen.xml:system/etc/permissions/org.cyanogenmod.livelockscreen.xml
+
 # Theme engine
 include vendor/beanstalk/config/themes_common.mk
 
@@ -127,6 +131,7 @@ PRODUCT_PACKAGES += \
     OmniSwitch \
     Eleven \
     LockClock \
+    CyanogenSetupWizard \
     CMSettingsProvider \
     ExactCalculator
 
@@ -201,7 +206,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/beanstalk/overlay/common
 
-BeanStalk_Version=6.06
+BeanStalk_Version=6.07
 BS_VERSION := BeanStalk-$(BeanStalk_Version)-$(shell date -u +%Y%m%d)-$(BS_BUILD)
 
 PRODUCT_PROPERTY_OVERRIDES += \
