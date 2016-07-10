@@ -100,6 +100,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/beanstalk/config/permissions/com.cyanogenmod.android.xml:system/etc/permissions/com.cyanogenmod.android.xml
 
+# custom spezi77 support for mako
+PRODUCT_COPY_FILES += \
+    vendor/beanstalk/prebuilt/common/etc/thermald.conf:system/etc/thermald.conf \
+    vendor/beanstalk/prebuilt/common/bin/mpdfake:system/bin/mpdfake
+
 # Theme engine
 include vendor/beanstalk/config/themes_common.mk
 
