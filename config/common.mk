@@ -102,6 +102,7 @@ PRODUCT_COPY_FILES += \
 
 # custom spezi77 support for mako
 PRODUCT_COPY_FILES += \
+    vendor/beanstalk/prebuilt/common/etc/init.d/10makoinit:system/etc/init.d/10makoinit \
     vendor/beanstalk/prebuilt/common/etc/thermald.conf:system/etc/thermald.conf \
     vendor/beanstalk/prebuilt/common/bin/mpdfake:system/bin/mpdfake
 
